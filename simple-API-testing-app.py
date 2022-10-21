@@ -53,7 +53,7 @@ stopmode = True #STOP AFTER requestCount
 userNum = 10 #HOW MANY USERS
 serverURL = 'https://192.168.3.191:5601'
 stoper = 0.5 #Stop between every psNum process 
-cert = '/home/pawethanski/.local/lib/python3.10/site-packages/certifi/cacert.pem'
+cert = False # can change to True/False/Certs file
 
 #DEFAULT VARIABLES 
 
