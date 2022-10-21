@@ -51,9 +51,8 @@ requestCount = 50 #HOW MANY REQUESTS
 onOff = True #ON/OFF
 stopmode = True #STOP AFTER requestCount
 userNum = 10 #HOW MANY USERS
-serverURL = 'https://192.168.3.191:5601'
+serverURL = 'localhost:5601'
 stoper = 0.5 #Stop between every psNum process 
-cert = False # can change to True/False/Certs file
 
 #DEFAULT VARIABLES 
 
@@ -66,13 +65,13 @@ def curl(url, payload, userPass, method):
     url = serverURL+url
     headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
     if(method == 'post'):
-        r = requests.post(url, data=payload, headers=headers, auth=(userPass[0], userPass[1]), verify=cert)
+        r = requests.post(url, data=payload, headers=headers, auth=(userPass[0], userPass[1]))
     elif (method == 'delete'):
-        r = requests.delete(url, data=payload, headers=headers, auth=(userPass[0], userPass[1]), verify=cert)
+        r = requests.delete(url, data=payload, headers=headers, auth=(userPass[0], userPass[1]))
     elif (method == 'put'):
-        r = requests.put(url, data=payload, headers=headers, auth=(userPass[0], userPass[1]), verify=cert)
+        r = requests.put(url, data=payload, headers=headers, auth=(userPass[0], userPass[1]))
     elif (method == 'get'):
-        r = requests.get(url, data=payload, headers=headers, auth=(userPass[0], userPass[1]), verify=cert)
+        r = requests.get(url, data=payload, headers=headers, auth=(userPass[0], userPass[1]))
 
 #COUNTING FINAL DATA
 
